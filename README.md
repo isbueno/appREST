@@ -13,7 +13,7 @@ O objetivo final é conseguir ler uma tabela "Livro" em MySql fazendo uso de uma
 
 ### Tabela Livro
 
-![image](https://github.com/isbueno/appREST/assets/102770607/87a85cc2-3a65-489a-86f8-f5e0995a7b6c)
+![image](https://github.com/isbueno/appREST/assets/102770607/c260d8b0-b62e-4922-8921-94519275c17d)
 
 Legenda: Tabela Livro no diagrama de Classe.
 
