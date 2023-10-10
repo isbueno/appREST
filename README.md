@@ -1,5 +1,5 @@
 # LivrariaREST
-API CRUD REST para o gerenciamento de uma tabela relacional simples.
+API CRUD RESTful para o gerenciamento de uma tabela relacional simples.
 
 O objetivo final é conseguir ler uma tabela "Livro" em MySql fazendo uso da ORM Sequelize. Para montar a aplicação, foram usados Node.js e Express.js.
 
