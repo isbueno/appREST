@@ -57,20 +57,28 @@ Instale o drive necessário para usar o mysql:
 npm install mysql2
 ```
 
-Para configurar o banco de dados você precisa iniciar alguns arquivos.
+Em seguida, abra o arquivo 'book.model.js' e configure o acesso ao banco de dados da sua máquina. Adicione seu user e sua senha.
 
-Para criar a tabela relacional 'livro':
+Em seguida, para criar a tabela relacional 'livro', rode:
 ```
 node book.model.js
 ```
 
-Para popular o banco de dados com alguns livros:
+Agora, rode 'database.js' para popular o banco de dados com alguns livros:
 ```
 node database.js
 ```
 
 
-Após finalizar essas instruções, a aplicação poderá ser usada. 
+Após finalizar essas instruções, a aplicação poderá ser usada. Ative o servidor com: 
+```
+node server.js
+```
+
+No navegador, abra:
+```
+http://localhost:5000
+```
 
 
 
