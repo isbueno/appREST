@@ -9,8 +9,7 @@ O objetivo final é conseguir ler uma tabela "Livro" em MySql fazendo uso da ORM
 
 ## Tutorial para instalação
 
-Existem duas opções para acessar o projeto, clonar esse repositório no seu computador ou baixar o arquivo zip 'livraria_rest.rar'. 
-Antes disso, certifique-se de adicionar um banco de dados no seu computador. De maneira geral, basta abrir o CMD, logar no MySql e digitar:
+Antes de iniciar o tutorial, certifique-se de adicionar um banco de dados no seu computador. De maneira geral, basta abrir o CMD, logar no MySql e digitar:
 
 ```
 mysql> CREATE DATABASE ecommerce_db;
@@ -23,7 +22,7 @@ git clone git@github.com:isbueno/livrariaREST.git
 git init 
 ```
 
-Os próximos passos servem tanto para quem está com o repositório git clonado quanto para quem baixou o arquivo.
+Agora, é necessário instalar alguns pacotes para que a aplicação funcione.
 
 Primeiro, o pacote do node precisa ser instalado.
 
