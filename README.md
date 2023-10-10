@@ -7,7 +7,73 @@ O objetivo final é conseguir ler uma tabela "Livro" em MySql fazendo uso da ORM
 <br>
 <br>
 
-## Instalação
+## Tutorial para instalação
+
+Existem duas opções para acessar o projeto, clonar esse repositório no seu computador ou baixar o arquivo zip 'livraria_rest.rar'. 
+Antes disso, certifique-se de adicionar um banco de dados no seu computador. De maneira geral, basta abrir o CMD, logar no MySql e digitar:
+
+```
+mysql> CREATE DATABASE ecommerce_db;
+```
+
+Para clonar o projeto, abra o git bash em algum diretório e digite:
+
+```
+git clone git@github.com:isbueno/livrariaREST.git
+git init 
+```
+
+Os próximos passos servem tanto para quem está com o repositório git clonado quanto para quem baixou o arquivo.
+
+Primeiro, o pacote do node precisa ser instalado.
+
+```
+npm install node
+```
+
+Instale o express: 
+```
+npm install express --save
+```
+
+Instale o ejs:
+```
+npm install ejs
+```
+
+Instale o method-override, ele foi utilizado para que o formulário pudesse aceitar um método PUT.
+```
+npm install method-override
+```
+
+
+Instale o sequelize para usar a ORM:
+
+```
+npm install sequelize
+```
+
+Instale o drive necessário para usar o mysql:
+```
+npm install mysql2
+```
+
+Para configurar o banco de dados você precisa iniciar alguns arquivos.
+
+Para criar a tabela relacional 'livro':
+```
+node book.model.js
+```
+
+Para popular o banco de dados com alguns livros:
+```
+node database.js
+```
+
+
+Após finalizar essas instruções, a aplicação poderá ser usada. 
+
+
 
 
 
