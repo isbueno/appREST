@@ -46,6 +46,7 @@ const Livro = sequelize.define("livro", {
 }, {freezeTableName: true
 });
 
+// Verificando a criação da tabela
 sequelize.sync().then(() => {
     console.log('\nTabela Livros criada.');
 
