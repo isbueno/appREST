@@ -1,10 +1,9 @@
 const express  = require('express');
 const app = express();
-const door = 5000;
+const door = 5000; // definindo a porta
 
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
-
 
 app.use(express.json());
 
@@ -16,7 +15,7 @@ app.set('views', path.join(__dirname, '/views'));
 app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
 
-
+// Importando as configurações do banco de dados
 const { sequelize, Livro } = require('./book.model')
 
 // Definindo home
@@ -28,7 +27,8 @@ app.get('/', (req, res)=>{
 // Apresentar todos os livros
 app.get('/livros', (req, res) => {
     console.log("livros");
-    
+
+    // Função que retorna todos os dados do banco
     Livro.findAll().then(livros => { 
         res.render('livros', {livros}); 
     }).catch((error) => {
@@ -43,6 +43,7 @@ app.get('/livros', (req, res) => {
 app.get('/livros/:id', (req,res) => {
     const { id } = req.params;
 
+    // Função para encontrar um dados de acordo com o parâmetro passado
     Livro.findOne({ where: { id: id } }
     ).then( livro => {
         res.render('livro_individual', {livro});
@@ -64,6 +65,7 @@ app.get('/cadastrar', (req, res) => {
 app.post('/cadastrar', (req, res) => {
     const { titulo, autor, genero, editora, preco, sku, quant_paginas } = req.body;
 
+    // Função para adicionar novos dados ao banco
     Livro.create({
         titulo,
         autor,
@@ -75,8 +77,7 @@ app.post('/cadastrar', (req, res) => {
     }).then(livro => {
         res.redirect(`livros/${livro.id}`)
     }).catch(error => {
-        console.error('Failed to create a new book: ', error);
-        res.status(500).json({ error: 'Failed to create a new book' });
+        console.error('Falha ao criar novo livro: ', error);
     });
 });
 
@@ -84,14 +85,15 @@ app.post('/cadastrar', (req, res) => {
 app.delete('/livros/:id', (req, res) => {
     const { id } = req.params;
 
+    // Função para apagar um livro do banco de acordo com o parâmetro passado
     Livro.destroy({ where: { id: id } })
         .then(() => {
             console.log('\n\nLIVRO APAGADO\n\n');
-            res.redirect('livros'); // Envie um status 200 OK para indicar que a exclusão foi bem-sucedida
+            res.redirect('livros');
         })
         .catch(error => {
             console.error('Erro ao excluir o livro: ', error);
-            res.sendStatus(500); // Envie um status 500 Internal Server Error para indicar uma falha na exclusão
+            res.sendStatus(500);
         });
 });
 
