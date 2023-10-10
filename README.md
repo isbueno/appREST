@@ -7,7 +7,7 @@ O objetivo final é conseguir ler uma tabela "Livro" em MySql fazendo uso da ORM
 <br>
 <br>
 
-## Tutorial para instalação
+## Tutorial para instalação e execução
 
 Antes de iniciar o tutorial, certifique-se de adicionar um banco de dados no seu computador. De maneira geral, basta abrir o CMD, logar no MySql e digitar:
 
@@ -19,8 +19,13 @@ Para clonar o projeto, abra o git bash em algum diretório e digite:
 
 ```
 git clone git@github.com:isbueno/livrariaREST.git
-git init 
+
+// ou
+
+git clone https://github.com/isbueno/livrariaREST.git
 ```
+<br>
+<br>
 
 Agora, é necessário instalar alguns pacotes para que a aplicação funcione.
 
@@ -56,8 +61,11 @@ Instale o drive necessário para usar o mysql:
 ```
 npm install mysql2
 ```
+<br>
+<br>
 
-Em seguida, abra o arquivo 'book.model.js' e configure o acesso ao banco de dados da sua máquina. Adicione seu user e sua senha.
+Em seguida, abra o arquivo 'book.model.js' e **configure o acesso ao banco de dados da sua máquina. Adicione seu user e sua senha.**
+<br>
 
 Em seguida, para criar a tabela relacional 'livro', rode:
 ```
@@ -81,14 +89,10 @@ http://localhost:5000
 ```
 
 
-
-
-
-
 <br>
 <br>
 
-### Tabela Livro
+## Tabela Livro
 
 ![image](https://github.com/isbueno/appREST/assets/102770607/c260d8b0-b62e-4922-8921-94519275c17d)
 
