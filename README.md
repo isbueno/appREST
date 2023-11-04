@@ -12,7 +12,7 @@ O objetivo final é conseguir ler uma tabela "Livro" em MySql fazendo uso da ORM
 Antes de iniciar o tutorial, certifique-se de adicionar um banco de dados no seu computador. De maneira geral, basta abrir o terminal, logar no MySql e digitar:
 
 ```
-mysql> CREATE DATABASE ecommerce_db;
+CREATE DATABASE ecommerce_db;
 ```
 
 Para clonar o projeto, abra o git bash em algum diretório e digite:
@@ -27,7 +27,7 @@ git clone https://github.com/isbueno/livrariaREST.git
 <br>
 <br>
 
-Agora, é necessário instalar alguns pacotes para que a aplicação funcione.
+Agora, é necessário instalar alguns pacotes no diretório clonado.
 
 Primeiro, o pacote do node precisa ser instalado.
 
