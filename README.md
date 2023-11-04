@@ -9,7 +9,7 @@ O objetivo final é conseguir ler uma tabela "Livro" em MySql fazendo uso da ORM
 
 ## Tutorial para instalação e execução
 
-Antes de iniciar o tutorial, certifique-se de adicionar um banco de dados no seu computador. De maneira geral, basta abrir o CMD, logar no MySql e digitar:
+Antes de iniciar o tutorial, certifique-se de adicionar um banco de dados no seu computador. De maneira geral, basta abrir o terminal, logar no MySql e digitar:
 
 ```
 mysql> CREATE DATABASE ecommerce_db;
